@@ -14,67 +14,51 @@ card3.addEventListener( 'click', function() {
 const $bundle1 = document.querySelector(".thecard1")
 const $bundle2 = document.querySelector(".thecard2")
 const $bundle3 = document.querySelector(".thecard3")
+// const $facecard = document.querySelector(".facecard")
+const $bundleTag = document.createElement("div")
 const $maincontainer = document.querySelector(".maincontainer")
 const baseURL = "http://localhost:3000/cards/" 
 const baseCardURL = "http://localhost:3000/cards/id=" 
+
 fetch(baseURL)
     .then(response => response.json())
     .then(displayCards)
 
 function displayCards(cards){
-    const $card1 = random(1,26)
-    const $card2 = random(27,52)
-    const $card3 = random(53,78)
 
-    cards.forEach(card => {
-        if(card.bundle === "1"){
-            for (i = 1; i < 27; i++) {
-                if (i === $card1.toFixed()) {
-                    fetch(baseCardURL +i.toString() )
-                      .then(response => response.json())
-                      .then(eachCard)
-                    break; }
-                return;
-              }
-        } else if (card.bundle === "2") {
-            for (i = 27; i < 53; i++) {
-                if (i === $card2.toFixed()) { 
-                    fetch(baseCardURL +i.toString() )
-                      .then(response => response.json())
-                      .then(eachCard)
-                  break; }
-                return;
-                
-              }
-            // console.log("there are none")
-            // console.log(card.id = $card2.toFixed())
-        
-        } else{
-            for (i = 53; i < 79; i++) {
-                if (i === $card3.toFixed()) {
-                    fetch(baseCardURL +i.toString() )
-                      .then(response => response.json())
-                      .then(eachCard)
-                  break; }
-                return ;
-              }
-            console.log("these are the third")
-            console.log(card.id = $card3.toFixed())
-        }      
-    });
-}
-
-function eachCard(card){
-  
-    bundleCard(card.name, card.desc, card.image)
     
+    const $card1 = random(1,26).toFixed()
+    const $card2 = random(27,52).toFixed()
+    const $card3 = random(53,78).toFixed()
+
+  
+    
+    $bundle1.append(eachCard(cards, "1", $card1)[0], eachCard(cards, "1", $card1)[1]) 
+    $bundle2.append(eachCard(cards, "2", $card2)[0], eachCard(cards, "2", $card2)[1]) 
+    $bundle3.append(eachCard(cards, "3", $card3)[0], eachCard(cards, "3", $card3)[1]) 
+    console.log(eachCard(cards, "1", $card1)[1])
+    $maincontainer.append($bundle1, $bundle2, $bundle3)
 }
 
-
-function bundleCard(name, desc, image){
-    console.log(bundle.id, "got the name")
+function eachCard(card, $bundle, $cardID){
     const $thefront = document.createElement("div")
     $thefront.classList.add("thefront")
+
+    const $firstImage = document.createElement('img')
+    $firstImage.src = "https://www.wopc.co.uk/images/subjects/tarot/rider-waite/pam-roses-lilies-back.jpg"
+    $thefront.append($firstImage)
+    
+    const $chosenCard = card.filter(card => card.bundle === $bundle && card.id == $cardID)
+    const oneCard = bundleCard($chosenCard[0].name, $chosenCard[0].desc, $chosenCard[0].image)
+    // $bundleTag.append(oneCard)
+    return [$thefront, oneCard];  
+    // console.log($chosenCard[0].name, $chosenCard[0].desc, $chosenCard[0].image)
+}
+
+
+function bundleCard(name, desc, cardImage){
+    // console.log(bundle.id, "got the name")
+    
     const $theback = document.createElement("div")
     $theback.classList.add("theback")
     const $facecard = document.createElement("div")
@@ -83,12 +67,14 @@ function bundleCard(name, desc, image){
     $description.classList.add("description")
     
     //the first image
-    const $firstImage = `<img src='${"https://www.wopc.co.uk/images/subjects/tarot/rider-waite/pam-roses-lilies-back.jpg"}' alt="front card">`
-    $thefront.append($firstImage)
+    // const $firstImage = document.createElement('img')
+    // $firstImage.src = "https://www.wopc.co.uk/images/subjects/tarot/rider-waite/pam-roses-lilies-back.jpg"
+    // $thefront.append($firstImage)
 
 
     //the face card after flipped
-    const $image = `<img src='${image}' alt="card"></img>`
+    const $image = document.createElement('img')
+    $image.src = `${cardImage}`
     $facecard.append($image)
 
     //description div
@@ -99,14 +85,14 @@ function bundleCard(name, desc, image){
     $description.append($cardName, $desc)
 
     //the flipped side of the card
-    // $theback.append($facecard, $description)
+    $theback.append($facecard, $description)
 
     //a single bundle
-    // return $thefront, $thefront
-    $bundle1.append($thefront,$theback)
-    // $bundle2.append($thefront,$theback)
-    // $bundle3.append($thefront,$theback)
-    $maincontainer.append($bundle1, $bundle2, $bundle3)
+    return $theback
+    // return $bundleTag.append($thefront,$theback)
+    // // $bundle2.append($thefront,$theback)
+    // // $bundle3.append($thefront,$theback)
+    // $maincontainer.append($bundleTag)
 
 
 }

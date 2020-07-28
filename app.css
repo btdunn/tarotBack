@@ -24,7 +24,7 @@
     transform-style: preserve-3d;
     transition: all 0.5s ease;
     /* margin-top: 50px; */
-    margin-left: 300px;
+    margin-left: 350px;
     /* margin-bottom: 1500px; */
     visibility: visible;
     
@@ -36,7 +36,7 @@
     transform-style: preserve-3d;
     transition: all 0.5s ease;
     /* margin-top: 50px; */
-    margin-left: 600px;
+    margin-left: 700px;
     
 }
 
@@ -52,6 +52,7 @@
 
 .thefront{
     position: absolute;
+    /* background-image: url("https://www.wopc.co.uk/images/subjects/tarot/rider-waite/pam-roses-lilies-back.jpg") */
 
     backface-visibility: hidden;
     color: #333;
