@@ -52,14 +52,14 @@
 
 .thefront{
     position: absolute;
-   
+
     backface-visibility: hidden;
     color: #333;
     
 }
 .theback{
     position: absolute;
-   
+
     backface-visibility: hidden;
     color: #333;
     transform: rotateY(180deg);

@@ -1,13 +1,13 @@
-var card = document.querySelector('.thecard1');
+let card = document.querySelector('.thecard1');
 card.addEventListener( 'click', function() {
   card.classList.toggle('is-flipped');
 });
 
-var card2 = document.querySelector('.thecard2');
+let card2 = document.querySelector('.thecard2');
 card2.addEventListener( 'click', function() {
   card2.classList.toggle('is-flipped');
 });
-var card3 = document.querySelector('.thecard3');
+let card3 = document.querySelector('.thecard3');
 card3.addEventListener( 'click', function() {
   card3.classList.toggle('is-flipped');
 });
@@ -31,41 +31,36 @@ function displayCards(cards){
             for (i = 1; i < 27; i++) {
                 if (i === $card1.toFixed()) {
                     fetch(baseCardURL +i.toString() )
-                    .then(response => response.json())
-                    .then(eachCard)
-                     break; }
+                      .then(response => response.json())
+                      .then(eachCard)
+                    break; }
                 return;
               }
-              
-            
-        }
-        else if (card.bundle === "2") {
+        } else if (card.bundle === "2") {
             for (i = 27; i < 53; i++) {
-                if (i === $card1.toFixed()) { fetch(baseCardURL +i.toString() )
-                    .then(response => response.json())
-                    .then(eachCard)
-                    break; }
-                    return;
+                if (i === $card2.toFixed()) { 
+                    fetch(baseCardURL +i.toString() )
+                      .then(response => response.json())
+                      .then(eachCard)
+                  break; }
+                return;
                 
               }
             // console.log("there are none")
             // console.log(card.id = $card2.toFixed())
-         
+        
         } else{
             for (i = 53; i < 79; i++) {
-                if (i === $card1.toFixed()) {
+                if (i === $card3.toFixed()) {
                     fetch(baseCardURL +i.toString() )
-                    .then(response => response.json())
-                    .then(eachCard)
-                     break; }
+                      .then(response => response.json())
+                      .then(eachCard)
+                  break; }
                 return ;
               }
             console.log("these are the third")
             console.log(card.id = $card3.toFixed())
-            
         }      
-       
-        
     });
 }
 
