@@ -1,26 +1,32 @@
 
 
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
 .maincontainer{
     display: flex;
     position: relative;
-    width: 250px;
-    height: 320px;
-    border-spacing: 500px;
-    
+    width: 100px;
+    height: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    border-spacing: 550px;
+    margin-left: 250px;
+    margin-top: 100px;
 }
 
 .thecard1{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 200px;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
     
 }
+
 .thecard2{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 200px;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
     /* margin-top: 50px; */
@@ -31,13 +37,19 @@
 }
 .thecard3{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 200px;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
     /* margin-top: 50px; */
     margin-left: 700px;
     
+}
+.refresh{
+    display: inline-block;
+    margin-left: 540px;
+    margin-top: 40px;
+    /* background-color: ; */
 }
 
 .thecard1.is-flipped{
@@ -62,12 +74,54 @@
     position: absolute;
 
     backface-visibility: hidden;
-    color: #333;
+    color:wheat;
     transform: rotateY(180deg);
     text-align: center;
-    font-family: 'zilla slab', sans-serif;
+    font-family: 'Krona One', sans-serif;
     border-radius: 20px;
     font-size: 18px;
     font-weight: bold;
 
+}
+
+/* page start */ 
+.splash{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: 2000;
+    color: white;
+    font-size: 80%;
+    text-align: center;
+    line-height: 90vh;
+}
+.splash.display-none{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background:white;
+    z-index: -10;
+    color: white;
+    text-align: center;
+    line-height: 90vh;
+    transition: all 1s;
+}
+@keyframes fadeIn{
+    to{
+        opacity: 5;
+    }
+}
+.fade-in{
+    opacity: 0;
+    animation: fadein 3s ease-in forwards;
+}
+
+body{
+    background-image: url("https://c.wallhere.com/photos/5f/88/patterns_background_dark_wooden_texture-1065788.jpg!d");
 }

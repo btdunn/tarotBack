@@ -1,3 +1,10 @@
+const splash = document.querySelector('.splash')
+document.addEventListener('DOMContentLoaded', (e)=>{
+  setTimeout(()=>{
+    splash.classList.add('display-none');
+  }, 2000 );
+})
+
 let card = document.querySelector('.thecard1');
 card.addEventListener( 'click', function() {
   card.classList.toggle('is-flipped');
@@ -75,6 +82,8 @@ function bundleCard(name, desc, cardImage){
     //the face card after flipped
     const $image = document.createElement('img')
     $image.src = `${cardImage}`
+    $image.width = "277"
+    $image.height = "477"
     $facecard.append($image)
 
     //description div
