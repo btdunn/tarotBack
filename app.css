@@ -9,9 +9,10 @@
     height: 200px;
     max-height: 200px;
     min-height: 200px;
-    border-spacing: 550px;
-    margin-left: 250px;
-    margin-top: 100px;
+    border-spacing: 150px;
+    margin-left: 275px;
+    margin-top: 55px;
+    transform-style: preserve-3d;
 }
 
 .thecard1{
@@ -21,6 +22,9 @@
     transform-style: preserve-3d;
     transition: all 0.5s ease;
     
+}
+.thecard1:-ms-ticks-after {
+    content: 'Past';
 }
 
 .thecard2{
@@ -70,6 +74,27 @@
     color: #333;
     
 }
+.pastHtml{
+    margin-top: -30px;
+    margin-left: 10px;
+    color: wheat;
+    font-family: 'Krona One', sans-serif;
+}
+
+.presentHtml{
+    margin-top: -30px;
+    margin-left: 150px;
+    color: wheat;
+    font-family: 'Krona One', sans-serif;
+}
+
+.futureHtml{
+    margin-top: -30px;
+    margin-left: 130px;
+    color: wheat;
+    font-family: 'Krona One', sans-serif;
+}
+
 .theback{
     position: absolute;
 
@@ -91,9 +116,9 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: black;
+    background-image: url("https://images.unsplash.com/photo-1556388275-bb5585725aca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
     z-index: 2000;
-    color: white;
+    color:grey;
     font-size: 80%;
     text-align: center;
     line-height: 90vh;
@@ -105,9 +130,9 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background:white;
+    background-image: url("https://images.unsplash.com/photo-1556388275-bb5585725aca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
     z-index: -10;
-    color: white;
+    color: grey;
     text-align: center;
     line-height: 90vh;
     transition: all 1s;
@@ -125,3 +150,4 @@
 body{
     background-image: url("https://c.wallhere.com/photos/5f/88/patterns_background_dark_wooden_texture-1065788.jpg!d");
 }
+
