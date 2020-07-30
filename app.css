@@ -9,9 +9,10 @@
     height: 200px;
     max-height: 200px;
     min-height: 200px;
-    border-spacing: 550px;
+    border-spacing: 150px;
     margin-left: 275px;
-    margin-top: 15px;
+    margin-top: 55px;
+    transform-style: preserve-3d;
 }
 
 .thecard1{
@@ -21,6 +22,9 @@
     transform-style: preserve-3d;
     transition: all 0.5s ease;
     
+}
+.thecard1:-ms-ticks-after {
+    content: 'Past';
 }
 
 .thecard2{
@@ -70,6 +74,27 @@
     color: #333;
     
 }
+.pastHtml{
+    margin-top: -30px;
+    margin-left: 10px;
+    color: wheat;
+    font-family: 'Krona One', sans-serif;
+}
+
+.presentHtml{
+    margin-top: -30px;
+    margin-left: 150px;
+    color: wheat;
+    font-family: 'Krona One', sans-serif;
+}
+
+.futureHtml{
+    margin-top: -30px;
+    margin-left: 130px;
+    color: wheat;
+    font-family: 'Krona One', sans-serif;
+}
+
 .theback{
     position: absolute;
 
@@ -126,13 +151,3 @@ body{
     background-image: url("https://c.wallhere.com/photos/5f/88/patterns_background_dark_wooden_texture-1065788.jpg!d");
 }
 
-.labelBox{
-    display: flex;
-    justify-content: space-around;
-}
-
-.labels{
-    color: wheat;
-    font-family: 'Krona One', sans-serif;
-    font-size: 20pt;
-}
