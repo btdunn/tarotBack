@@ -68,31 +68,8 @@
 
 .thefront{
     position: absolute;
-    /* background-image: url("https://www.wopc.co.uk/images/subjects/tarot/rider-waite/pam-roses-lilies-back.jpg") */
-
     backface-visibility: hidden;
     color: #333;
-    
-}
-.pastHtml{
-    margin-top: -30px;
-    margin-left: 10px;
-    color: wheat;
-    font-family: 'Krona One', sans-serif;
-}
-
-.presentHtml{
-    margin-top: -30px;
-    margin-left: 150px;
-    color: wheat;
-    font-family: 'Krona One', sans-serif;
-}
-
-.futureHtml{
-    margin-top: -30px;
-    margin-left: 130px;
-    color: wheat;
-    font-family: 'Krona One', sans-serif;
 }
 
 .theback{
@@ -144,7 +121,7 @@
 }
 .fade-in{
     opacity: 0;
-    animation: fadein 3s ease-in forwards;
+    animation: fadein 1s ease-in forwards;
 }
 
 body{

@@ -21,7 +21,6 @@ card3.addEventListener( 'click', function() {
 const $bundle1 = document.querySelector(".thecard1")
 const $bundle2 = document.querySelector(".thecard2")
 const $bundle3 = document.querySelector(".thecard3")
-// const $facecard = document.querySelector(".facecard")
 const $bundleTag = document.createElement("div")
 const $maincontainer = document.querySelector(".maincontainer")
 const baseURL = "http://localhost:3000/cards/" 
@@ -54,13 +53,11 @@ function displayCards(cards){
     const $firstImage = document.createElement('img')
     $firstImage.src = "https://www.wopc.co.uk/images/subjects/tarot/rider-waite/pam-roses-lilies-back.jpg"
     $thefront.append($firstImage)
-    // console.log($cardID.toString())
+
     const $chosenCard = card.filter(card => card.bundle === $bundle && card.id.toString() === $cardID.toString())
-    // console.log(card.bundle)
     
     // const oneCard = bundleCard($chosenCard.name, $chosenCard.desc, $chosenCard.image, $chosenCard.bundle)
     const oneCard = bundleCard($chosenCard[0].name, $chosenCard[0].desc, $chosenCard[0].image, $chosenCard[0].bundle)
-    // console.log(oneCard)
     return ["",$thefront, oneCard];  
 }
 
