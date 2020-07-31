@@ -4,11 +4,8 @@ Tarot is your invitation to divination! Attain greater understanding of the cosm
 
 ## About
 
-Tarot presents three card Tarot readings, each card relating to the Past, Present and Future respectively. Don't like your reading? Fret not; Tarot provides a bespoke (random) selection of cards on every visit. With 17,576 possible combinations, every user is assured a unique experience!
+Tarot presents three card Tarot readings, each card relating to the Past, Present and Future respectively. Following a series of life questions, you'll be presented with a relevant reading! Don't like your reading? Fret not; Tarot provides a bespoke (random) selection of cards on every visit. With 17,576 possible combinations, every user is assured a unique experience!
 
-## Video Tour
-
-WIP
 
 ## Under the Hood
 
