@@ -12,12 +12,12 @@ WIP
 
 ## Under the Hood
 
-Ruby ver 2.6.1
-Rails 6.0.3.2
-ActiveRecord ver 6.0 3.2
-SQLite3 ver 1.4
-Sinatra ver 2.0
-Sinatra ActiveRecord ver 2.0
+* Ruby ver 2.6.1
+* Rails 6.0.3.2
+* ActiveRecord ver 6.0 3.2
+* SQLite3 ver 1.4
+* Sinatra ver 2.0
+* Sinatra ActiveRecord ver 2.0
 
 ## Install
 
